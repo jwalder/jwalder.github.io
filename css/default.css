@@ -1,0 +1,467 @@
+html, body {
+    max-width: 100%;
+	background-color: #000000;
+    overflow-x: hidden;
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #000000;
+	overflow: hidden;
+	z-index: -20;
+}
+
+#navigation {
+	float: left;
+	width: 16%;
+	height: 100%;
+	color: #000000;
+	background-color: #000000;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 2%;
+	padding-bottom: 100%;
+	z-index: 2;
+	position: fixed;
+	overflow: hidden;
+	top: 0%;
+}
+
+#slideshow { 
+    margin: 50px auto; 
+    position: fixed; 
+    width: 92%;
+    height: 100%; 
+	right: 0%;
+    top: -8%;
+	position: fixed;
+	overflow: hidden;
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 11px; 
+    left: 10px; 
+}
+
+#minislideshow { 
+    margin: 50px auto; 
+    position: fixed; 
+    width: 24%;
+    height: 100%; 
+	right: 2%;
+    top: 15%;
+    padding: 1%;
+	position: fixed;
+	overflow: hidden;
+}
+
+#minislideshow > div { 
+    position: absolute; 
+    top: 11px; 
+    left: 10px; 
+}
+
+.hvr-bounce-to-bottom p {
+	color: #000000;
+	transition: .5s;
+}
+
+.hvr-bounce-to-bottom {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	background-color: #ffffff;
+	width: 12%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	position: absolute;
+	-webkit-transition-property: #F0B310;
+	transition-property: #F0B310;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	top: 0%;
+	right: 0%;
+	z-index: 5;
+	font-family: questions;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 1%;
+	overflow: hidden;
+}
+
+.hvr-bounce-to-bottom:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #F0B310;
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-bottom:hover p, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
+	color: white;
+}
+
+.hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.tooltip {
+	display: inline-block;
+	position: absolute;
+	top: 19%;
+	right: 0%;
+	width: 30%;
+	height: auto;
+	opacity: 0;
+	background-color: white;
+	z-index: 3;
+	padding: 1%;
+	overflow: hidden;
+}
+
+.tooltip p {
+	color: black;
+	padding-top: -10%;
+}
+
+.hvr-bounce-to-bottom:hover + .tooltip {
+	opacity: 1;
+	transition: 1s;
+}
+
+.hvr-bounce-to-bottom:hover > #curvedarrow {
+	border-right: 9px solid white;
+}
+
+.hvr-bounce-to-bottom:hover > #curvedarrow:after {
+	border-top: 3px solid white;
+}
+
+.hvr-bounce-to-left {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	position: relative;
+	float: right;
+	width: 13%;
+	height: 5%;
+	-webkit-backface-visibility: hidden;
+	background-color: white;
+	color: black;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition-property: #F0B310;
+	transition-property: #F0B310;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	transition: .5s;
+	text-align: middle;
+	padding-left: 2%;
+}
+
+.hvr-bounce-to-left:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #F0B310;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: 100% 50%;
+	transform-origin: 100% 50%;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-left:hover p, .hvr-bounce-to-left:focus, .hvr-bounce-to-left:active {
+	color: white;
+	transition: .5s;
+}
+
+.hvr-bounce-to-left:hover:before, .hvr-bounce-to-left:focus:before, .hvr-bounce-to-left:active:before {
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+	-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.hvr-bounce-to-left p {
+	color: black;
+	transition: .5s;
+}
+
+.tooltipAnswers {
+	display: inline-block;
+	position: relative;
+	left: 0%;
+	width: 75%;
+	height: auto;
+	opacity: 0;
+	padding-left: 3%;
+	padding-right: 3%;
+	padding-bottom: 2%;
+	background-color: white;
+	border: 3px solid #F0B310;
+	z-index: -5;
+}
+
+.tooltipAnswers p {
+	color: black;
+}
+
+.hvr-bounce-to-left:hover + .tooltipAnswers {
+	opacity: 1;
+	transition: .5s;
+}
+
+#curvedarrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 70%;
+	left: 42%;
+	border-top: 9px solid transparent;
+	border-right: 9px solid black;
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-o-transform: rotate(10deg);
+	transition: .5s;
+}
+
+#curvedarrow:after {
+	content: "";
+	position: absolute;
+	border: 0 solid transparent;
+	border-top: 3px solid black;
+	border-radius: 20px 0 0 0;
+	top: -12px;
+	left: -9px;
+	width: 12px;
+	height: 12px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transition: .5s;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;	
+	border-top: 15px solid #F0B310;
+}
+
+#navcontent {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 28%;
+	left: 0%;
+}
+
+.content {
+	width: 70%;
+	height: 100%;
+	background-color: #2a2a2a;
+	position: absolute;
+	top: 0%;
+	left: 18%;
+	padding-left: 8%;
+	padding-right: 7%;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	z-index: 2;
+	overflow: scroll;
+}
+
+.content .questions {
+	width: 50%;
+	margin-top: -25%;
+}
+
+.questions h1 {
+	font-family: resources;
+	color: white;
+}
+
+.pictures {
+	width: 30%;
+	height: 100%;
+	position: fixed;
+	top: 0%;
+	right: 0%;
+	background-color: black;
+	z-index: -5;
+}
+
+.pictures p {
+	width: 80%;
+	top: 55%;
+	right: -10%;
+	position: relative;
+	color: #F0B310;
+}
+
+.answers {
+	width: 25%;
+	height: 30%;
+	position: fixed;
+	top: 10%;
+	left: 73%;
+	background-color: white;
+}
+
+.answers h2 {
+	width: 80%;
+	height: 15%;
+	color: black;
+	position: absolute;
+	top: -28%;
+	left: 0%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 2%;
+	background-color: #F0B310;
+	overflow: hidden;
+}
+
+.indent {
+	margin-left: 7%;
+}
+
+.content p {
+	font-family: body;
+}
+
+.questions {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 40%;
+	left: 7%;
+	padding-bottom: 5%;	
+}
+
+.design {
+	width: 13%;
+	position: absolute;
+	right: 0;
+	bottom: 0%;
+	background-color: white;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+.design h5 {
+	font-family: questions;
+	color: black;
+}
+
+a {
+	font-family: resources;
+	display: block;
+	text-decoration: none;
+}
+
+@font-face {
+	font-family: type;
+	src: url(../fonts/centurygothicbolditalic.ttf);
+}
+
+@font-face {
+	font-family: body;
+	src: url(../fonts/centurygothic.ttf);
+}
+
+@font-face {
+	font-family: resources;
+	src: url(../fonts/centurygothicitalic.ttf);
+}
+
+@font-face {
+	font-family: questions;
+	src: url(../fonts/centurygothicbold.ttf);
+}
+
+#size {
+	display: none;
+	font-family: questions;
+}
+
+li {
+	color: #00688B;
+	padding: 2%;
+}
+
+li a {
+	padding-left: 1%;
+	color: #ffffff;
+}
+
+.currentLink {
+	color: #F0B310;
+}
+
+li a:hover {
+	color: #F0B310;
+	transition: .5s;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+h2 {
+	font-family: type;
+	color: #ffffff;
+}
+
+p {
+	font-family: questions;
+	color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+	#container {
+		display: none;
+	}
+	#size {
+		display: inline-block;
+		color: white;
+	}
+}
